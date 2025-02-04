@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borch - Photographer</title>
+    <meta name="description" content="Hi, I'm Steven Klafer, I wanna help some people to get beautiful images to discover their journey or adventure. ">
+
+
+    <link rel="stylesheet" href="./css/conteudo/about.css">
+    <link rel="stylesheet" href="./css/conteudo/blog.css">
+    <link rel="stylesheet" href="./css/conteudo/contact.css">
+    <link rel="stylesheet" href="./css/conteudo/footer.css">
+    <link rel="stylesheet" href="./css/conteudo/gallery.css">
+    <link rel="stylesheet" href="./css/conteudo/header.css">
+    <link rel="stylesheet" href="./css/conteudo/home.css">
+    <link rel="stylesheet" href="./css/conteudo/testimonials.css">
+    <link rel="stylesheet" href="./css/utilidades/animacao.css">
+    <link rel="stylesheet" href="./css/utilidades/cores.css">
+    <link rel="stylesheet" href="./css/utilidades/global.css">
+    <link rel="stylesheet" href="./css/utilidades/tipografia.css">
+
+    
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header class="header-bg">
+        <div class="header container">
+            <a href="index.html"><h2 class="font-1-l cor-c1" >Borch</h2></a>
+            <nav aria-label="primaria">
+                <span class="hamburguer" data-btn="mobile"></span>
+                <ul class="header-menu cor-w font-1-m">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="home-bg" id="home">
+        <div class="home container">
+            <img src="./External photos/logo.jpg" width="120" height="120" alt="foto" data-anime="200" class="logo">
+            <h3 class="font-1-l cor-c1" data-anime="400">Hi, I'm Arne Borch</h3>
+            <h1 class="font-1-xxl cor-w" data-anime="600">Let's take amazing pictures and build memories<span class="cor-c9">.</span></h1>
+            <p class="font-1-s cor-c4" data-anime="800">I wanna help some people to get beautiful images to discover their journey or adventure. 
+            And I'm here with the goal of bringing the best photographic experience to you.</p>
+            <a href="#contact" class="font-1-xs cor-15 buttom-1" data-anime="1000">contact with me</a>
+        </div>
+    </main>
+    
+    
+    <script>
+        window.onload = function() {
+            var animatedElements = document.querySelectorAll('[data-anime]');
+            
+            animatedElements.forEach(function(element) {
+                var delay = parseInt(element.getAttribute('data-anime'));
+                
+                // Apply initial styles for animation
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                
+                // Use setTimeout to add the 'animate' class after the delay
+                setTimeout(function() {
+                    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }, delay);
+            });
+        };
+    </script>
+    
+    <style>
+        /* Make sure all elements with data-anime start invisible */
+        [data-anime] {
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+    </style>
+    
+
+    <section class="about-bg" id="about" aria-label="About Me">
+        <div class="about new-container">
+            <div class="photo">
+                <img src="./External photos/cover.jpg" alt="homem tirando foto da paisagem">
+            </div>
+            <div class="content">
+                <h1 class="font-1-xxl cor-w ">About Me<span class="cor-c9">.</span></h1>
+                <h2 class="font-1-xl cor-c1">Visual storyteller whose passion is to tell stories through images</h2>
+                <p class="font-2-m cor-c5">I strive to create images that convey stories and evoke emotions, just as clothes tell stories about the wearer.
+
+                    .
+                    My philosophy is to create images with natural light and a creative mindset, without having to invest in expensive equipment or a big studio. </p>
+                <div class="icons">
+                    <a target="_blank" href="https://twitter.com/?lang=en"><img width="32" height="32" src="./icones/Twitter.svg" alt="Twitter"></a>
+                    <a target="_blank" href="https://l.instagram.com/?u=https%3A%2F%2Fm.facebook.com%2F1133325929%2F&e=AT1ClxAOzvQLAYfR0I7XRycvU_1R5NrVM5ThKD8XVau7GDi4cKnJ0Bv5OxGZTyBpnDE9TF-LDPB7f7hIp4_uA5fTFofY1hEEBw0iuvGN59cyPD48TDFEtjs"><img width="32" height="33" src="./icones/Facebook.svg" alt="Facebook.svg"></a>
+                    <a target="_blank" href="https://www.instagram.com/artborchphoto"><img width="32" height="32" src="./icones/Instagram.svg" alt="Instagram.svg"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <article class="gallery-bg" id="gallery">
+        <div class="gallery">
+            <h1 class="font-1-xxl cor-c15">My latest works<span class="cor-c9">.</span></h1>
+            <nav aria-label="secundaria">
+                <ul class="gallery-menu font-2-l cor-10" data-galleryNav>
+                    <li class="active-nav" data-category="all">All</li> <!-- Changed "All" to "Everything" -->
+                    <li data-category="architecture">Portraits</li>
+                    <li data-category="nature">Nude Art</li>
+                    <li data-category="landscapes">Nude Art On Location</li>
+                    <li data-category="urban">Nature</li>
+                </ul>
+                
+                
+            </nav>
+            <div class="photos-gallery container" data-gallery>
+                <div class="all active">
+                    <img class="all-4" src="https://drscdn.500px.org/photo/1104956641/q%3D80_m%3D2000_k%3D1/v2?sig=fdddd1a152344073baad501dc1db7255fca030cbef5af39adfc754ab4fd899e3" alt="">
+                    <img class="all-1" src="https://drscdn.500px.org/photo/1097959563/q%3D80_m%3D2000/v2?sig=f19b624a3dc86e936fecf39e4f6bd69b83e1df965ced655877b0228d25d60275" alt="">
+                    <img class="all-6" src="https://drscdn.500px.org/photo/1085164350/q%3D80_m%3D2000_k%3D1/v2?sig=ba7205826dd96dc044e60d2bc2e3aadacfc0a0c124eedb08834ceb94d6a803b2" alt="">
+                    <img class="all-3" src="https://drscdn.500px.org/photo/1050753080/q%3D80_m%3D2000_k%3D1/v2?sig=907a6fdc0f7a53a1003455d949b853e4a6450eeea3bac729c2431e9390e5f283" alt="">
+                    <img class="all-2" src="https://drscdn.500px.org/photo/1081750442/q%3D80_m%3D2000_k%3D1/v2?sig=4d91b4ec7336e5fe11f9e240bc50f279201742f8a92d04d54a481c2ab8d69f90" alt="">
+                    <img class="all-5" src="https://drscdn.500px.org/photo/1030700754/q%3D80_m%3D2000_k%3D1/v2?sig=ab6ef86e4d36c7a02cb4d9d19a4117cb0a471ae97889c80fb901b07e8d0ac310" alt="">
+                </div>
+    
+                <div class="architecture">
+                    <img class="all-4" src="https://drscdn.500px.org/photo/1104956641/q%3D80_m%3D2000_k%3D1/v2?sig=fdddd1a152344073baad501dc1db7255fca030cbef5af39adfc754ab4fd899e3" alt="">
+                    <img class="all-6" src="https://drscdn.500px.org/photo/1104956642/q%3D80_m%3D2000_k%3D1/v2?sig=fdb6f6663b87661279d7744ce81900bd0f3b69d5453ad8e7fa9b5092167af38e" alt="">
+                    <img class="all-2" src="https://drscdn.500px.org/photo/1082405548/q%3D80_m%3D2000_k%3D1/v2?sig=9f2b79b7042eb049bd629184aaaf9d7c080c4976cee364b9e8480403d0422236" alt="">
+                    <img class="all-1" src="https://drscdn.500px.org/photo/1081750371/q%3D80_m%3D2000_k%3D1/v2?sig=1b13a1f7837d7f53d61cb6456243443ba1943e0fffe95937d6244d51c0ce783c" alt="">
+                    <img class="all-3" src="https://drscdn.500px.org/photo/1059763277/q%3D80_m%3D2000/v2?sig=b0bd24dfb6d031c134de187bce9cd3afe5367b78e11a4c53fdc3b1925fc2e822" alt="">
+                    <img class="all-5" src="https://drscdn.500px.org/photo/1063647022/q%3D80_m%3D2000_k%3D1/v2?sig=63383be5e65e41f04c335070f8ac1f05fc6d1349fdf1acbd81e83d3a6f7308c5" alt="">
+                </div>
+    
+                <div class="nature">
+                    <img class="all-4" src="https://drscdn.500px.org/photo/1097959563/q%3D80_m%3D2000/v2?sig=f19b624a3dc86e936fecf39e4f6bd69b83e1df965ced655877b0228d25d60275" alt="">
+                    <img class="all-6" src="https://drscdn.500px.org/photo/1093840589/q%3D80_m%3D2000_k%3D1/v2?sig=5df9d8c776fc128684528c8033af088649ad13b35d7d48d136f0680940d09e7d" alt="">
+                    <img class="all-2" src="https://drscdn.500px.org/photo/1030683593/q%3D80_m%3D2000_k%3D1/v2?sig=db650e8659ac254111be8fdcf20a7a6f66aa5ad3143a7201cb150b19f5ea7adc" alt="">
+                    <img class="all-1" src="https://drscdn.500px.org/photo/1030699624/q%3D80_m%3D2000_k%3D1/v2?sig=b1824125fcf752ef48409ffb99ee4bc1b7f0f85ffd9c76568ddcc68a0a4ff611" alt="">
+                    <img class="all-3" src="https://drscdn.500px.org/photo/1081750539/q%3D80_m%3D2000_k%3D1/v2?sig=88b05ec87ef9e2cf1ec417ab2413248cd34e682eb7123e69afee25bfa9f2d80a" alt="">
+                    <img class="all-5" src="https://drscdn.500px.org/photo/1030700754/q%3D80_m%3D2000_k%3D1/v2?sig=ab6ef86e4d36c7a02cb4d9d19a4117cb0a471ae97889c80fb901b07e8d0ac310" alt="">
+                </div>
+    
+                <div class="landscapes">
+                    <img class="all-4" src="https://drscdn.500px.org/photo/1085164350/q%3D80_m%3D2000_k%3D1/v2?sig=ba7205826dd96dc044e60d2bc2e3aadacfc0a0c124eedb08834ceb94d6a803b2" alt="">
+                    <img class="all-6" src="https://drscdn.500px.org/photo/1077450063/q%3D80_m%3D2000_k%3D1/v2?sig=717cfd84a6705c54dfb511b8cdaab93331e0929b8fab9a9a23676da41ff6dbd2" alt="">
+                    <img class="all-2" src="https://drscdn.500px.org/photo/1030683315/q%3D80_m%3D2000_k%3D1/v2?sig=056aa3eddd01e686dd1214316d5f6478707b96044e2038a449518da0b092fd50" alt="">
+                    <img class="all-1" src="https://drscdn.500px.org/photo/1030683231/q%3D80_m%3D2000_k%3D1/v2?sig=fb957a7e7ddf3cf77910035a4b39e1073e569e06aec58dfd97555af20178ed23" alt="">
+                    <img class="all-3" src="https://drscdn.500px.org/photo/1030683125/q%3D80_m%3D2000_k%3D1/v2?sig=fa61391356824e450ecc3d1dfc2a0bbd895303b28f43e00b44fd66ec5cf2a297" alt=""> 
+                    <img class="all-5" src="https://drscdn.500px.org/photo/1030683125/q%3D80_m%3D2000_k%3D1/v2?sig=fa61391356824e450ecc3d1dfc2a0bbd895303b28f43e00b44fd66ec5cf2a297" alt="">
+                </div>
+    
+                <div class="urban">
+                    <img class="all-4" src="https://drscdn.500px.org/photo/1081750442/q%3D80_m%3D2000_k%3D1/v2?sig=4d91b4ec7336e5fe11f9e240bc50f279201742f8a92d04d54a481c2ab8d69f90" alt="">
+                    <img class="all-6" src="https://drscdn.500px.org/photo/1077449958/q%3D80_m%3D2000_k%3D1/v2?sig=2b1a7a8999fa4de851970de13fbe91182f0da75a160456cfeb2c71d3a2e5211c" alt="">
+                    <img class="all-2" src="https://drscdn.500px.org/photo/1060793566/q%3D80_m%3D2000_k%3D1/v2?sig=15721b4d8dd8043691b38f1931ba8137ce792513f17ce081e12f1e6e9b7340a5" alt=""> 
+                    <img class="all-1" src="https://drscdn.500px.org/photo/1050753080/q%3D80_m%3D2000_k%3D1/v2?sig=907a6fdc0f7a53a1003455d949b853e4a6450eeea3bac729c2431e9390e5f283" alt="">
+                    <img class="all-3" src="https://drscdn.500px.org/photo/1050753081/q%3D80_m%3D2000_k%3D1/v2?sig=16100d542469377aee9fd1633e5209e8be977f86b8c8c1a18eda98c9af8f9f13" alt="">
+                    <img class="all-5" src="https://drscdn.500px.org/photo/1050753079/q%3D80_m%3D2000_k%3D1/v2?sig=898e1ca1ee5bff25cf836249b08dbfbe92a9b72d3fa6640eb63b96907ba47f7f" alt="">
+                </div>
+            </div>
+        </div>
+    </article>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const menuItems = document.querySelectorAll('.gallery-menu li');
+    const allImages = document.querySelectorAll('.all, .nature, .urban, .landscapes, .architecture');
+    
+    // Set "All" or the initial category as active by default
+    document.querySelector('.all').classList.add('active');
+    document.querySelector('.gallery-menu li.active-nav').classList.add('active-nav');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Remove active class from all menu items
+            menuItems.forEach(menu => menu.classList.remove('active-nav'));
+            // Add active class to clicked menu item
+            item.classList.add('active-nav');
+            
+            // Hide all categories
+            allImages.forEach(images => images.classList.remove('active'));
+
+            // Get the category from the data-category attribute
+            const category = item.getAttribute('data-category');
+            
+            // Find and show the images related to the clicked category
+            const activeCategory = document.querySelector(`.${category}`);
+            
+            if (activeCategory) {
+                activeCategory.classList.add('active');
+            }
+        });
+    });
+});
+
+    </script>
+    
+    
+
+    <article class="blog-bg" id="blog">
+        <div class="blog">
+            <h1 class="font-1-xxl cor-c15">Blog<span class="cor-c9">.</span></h1>
+            <div class="posts-blog container">
+                <div class="post">
+                    <a href="#"><img src="./imgs/geral/computer.jpg" alt=""></a>
+                    <div class="post-content">
+                        <a href=""><h2 class="font-3-xl cor-c11">Senior Project</h2></a>
+                        <p class="font-2-m cor-c9">For my senior project paper I plan on writing about the history of photography and cameras, it will serve as background information because I will become knowledgeable on the background of photography. I know very little about this topic, but plan to grow more knowledgeable during the course of my senior project.</p>
+                        <div class="info">
+                            <div class="visualization">
+                                <img width="22" height="16" src="./icones/visibility.svg" alt="">
+                                <p class="font-3-m cor-c9">9340</p>
+                            </div>
+                            <div class="date">
+                                <p class="font-3-m cor-c9">Feb 13, 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post order">
+                    <div class="post-content ">
+                        <a href="#"><h2 class="font-3-xl cor-c11">Nomad Life</h2></a>
+                        <p class="font-2-m cor-c9">Being a nomadic entrepreneur means living life 100% on your own terms. From leaving behind the corporate life of a consistent and often capped salary, saying goodbye to cubicles, a regular work commute and the "daily grind"... to waking up to the sweet, thrilling taste of freedom.</p>
+                        <div class="info">
+                            <div class="visualization">
+                                <img width="22" height="16" src="./icones/visibility.svg" alt="">
+                                <p class="font-3-m cor-c9">12000</p>
+                            </div>
+                            <div class="date">
+                                <p class="font-3-m cor-c9">Jun 31, 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href=""><img src="./imgs/geral/digital-nomad.jpg" alt=""></a>
+                </div>
+
+                <div class="post">
+                    <a href="#"><img src="./imgs/geral/landscape.jpg" alt=""></a>
+                    <div class="post-content">
+                        <a href=""><h2 class="font-3-xl cor-c11">Visit to Landscapes</h2></a>
+                        <p class="font-2-m cor-c9">While some people are satisfied spending their vacation alongside a pool with a drink in hand, others prefer adventure and diverse spectacular landscapes. If that's you, these worldwide bucket list destinations are sure to please, so surreal that you might just think you've landed on a whole other planet.</p>
+                        <div class="info border-bottom">
+                            <div class="visualization">
+                                <img width="22" height="16" src="./icones/visibility.svg" alt="">
+                                <p class="font-3-m cor-c9">1570</p>
+                            </div>
+                            <div class="date">
+                                <p class="font-3-m cor-c9">Dec 23, 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="testimonials-bg" id="testimonials">   
+        <h1 class="font-1-xxl cor-w">Testimonials<span class="cor-c9">.</span></h1>
+        <div class="testimonials container">
+            <div class="client">
+                <h2 class="vanessa font-4-xl cor-c1">Emma Lister</h2>
+                <h3 class="font-4-m cor-c4">Model</h3>
+                <p class="font-2-m cor-c6">"Arne is an incredible artist who sees beauty in every form. His ability to create art with the human body is unmatched. He made me feel so comfortable and empowered throughout the entire shoot. His attention to detail and use of natural surroundings for on-location shoots results in photos that truly tell a story. I would absolutely recommend him to anyone looking to explore nude art photography."</p>
+            </div>
+            <div class="client">
+                <h2 class="john font-4-xl cor-c1">Liam Fox</h2>
+                <h3 class="font-4-m cor-c4">Photographer</h3>
+                <p class="font-2-m cor-c6">"Working with Arne was an unforgettable experience. His approach to nude art is incredibly respectful and artistic, showcasing the human form in such a raw and beautiful way. He knows how to work with light and nature to create stunning compositions that resonate emotionally. If you want to experience true art in photography, Arne is the one to go to."</p>
+            </div>
+            <div class="client">
+                <h2 class="carol font-4-xl cor-c1">Sophie Ramirez
+                </h2>
+                <h3 class="font-4-m cor-c4">Artist</h3>
+                <p class="font-2-m cor-c6">"Arne is a true visionary in the world of nude art. He captured my essence through his lens in a way no other photographer has ever done. The way he incorporates nature into his shoots adds an entirely new layer to the work. Every photograph feels timeless. His professionalism, combined with his ability to create such intimate, respectful art, makes him one of the best in the industry."</p>
+            </div>
+            <div class="client">
+                <h2 class="fernanda font-4-xl cor-c1">Jack Morrison
+                </h2>
+                <h3 class="font-4-m cor-c4">Model</h3>
+                <p class="font-2-m cor-c6">"Working with Arne was a transformative experience. His mastery of nude portraiture is remarkable, and he has a rare ability to create an atmosphere of trust and ease. The photos we created together were breathtaking, with natural settings that brought an incredible depth to the images. I can't wait to collaborate with him again."</p>
+            </div>
+            <div class="client">
+                <h2 class="stefan font-4-xl cor-c1">Maya Daniels
+                </h2>
+                <h3 class="font-4-m cor-c4">Photographer</h3>
+                <p class="font-2-m cor-c6">"Arne's work is nothing short of phenomenal. He captures the raw beauty of the human body with such grace and artistry. His skill with natural light and outdoor environments elevates his nude art into something truly exceptional. Each shot feels more like a masterpiece than a photograph. A true artist who I wholeheartedly recommend."</p>
+            </div>
+            <div class="client">
+                <h2 class="mohammad font-4-xl cor-c1">Peter Novak</h2>
+                <h3 class="font-4-m cor-c4">Art Curator</h3>
+                <p class="font-2-m cor-c6">"Arne's approach to nude art is both innovative and timeless. He has a rare ability to make each photograph feel personal and emotionally charged, even when exploring the human form in its most vulnerable state. His work in nature, combined with his understanding of human anatomy, results in stunning, evocative images. He is an extraordinary artist whose work speaks for itself."</p>
+            </div>
+
+        </div>
+    </article>
+
+    <article class="contact-bg" id="contact">
+        <div class="contact container">
+            <h1 class="font-1-xxl cor-w">Contact<span class="cor-c9">.</span></h1>
+            <div class="form-contact">
+                <h2 class="cor-c15 font-5-xl">Let's Talk!</h2>
+                <h3 class="cor-c10 font-3-l">Tell me about your idea here</h3>
+                <form class="form" action="#">
+                    <div>
+                        <label class="font-2-s cor-c11" for="nome">Name</label>
+                        <input class="font-3-s cor-c7" type="text" id="nome" name="nome" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label class="font-2-s cor-c11" for="email">Email</label>
+                        <input class="font-3-s cor-c7" type="email" id="email" name="email" placeholder="contact@email.com">
+                    </div>
+                    <div class="message-input">
+                        <label class="font-2-s cor-c11" for="message">Message</label>
+                        <textarea  class="font-3-s cor-c7" name="message" id="message" rows="5" cols="10" placeholder="What do you need?"></textarea>
+                    </div>
+                    <button class="buttom-2 font-5-m cor-w">Send a Message</button>
+                </form>
+                <ul class="font-2-s cor-10">
+                    <li class="location-black">Ringkoebing, Denmark</li>
+                    <li class="email-black">ARNE@PHOTO.COM</li>
+                    <li class="phone-black">+45 60775955</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer-bg">
+        <div class="footer container">
+            <div class="contacts">
+                <img width="132" height="29" src="./icones/S.klafer.svg" alt="logo">
+                <ul class="font-2-s cor-c5">
+                    <li class="location">Ringkoebing, Denmark</li>
+                    <li class="email">ARNE@PHOTO.COM</li>
+                    <li class="phone">+45 60775955</li>
+                </ul>
+            </div>
+            <div class="innerLinks">
+                <h2 class="font-4-l cor-w">QUICK LINKS</h2>
+                <ul class="font-2-s cor-c5">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="flick-photos">
+                <h2 class="font-4-l cor-w">FLICK PHOTOS</h2>
+                <div class="photos">
+                    <img src="./imgs/geral/flick-photo-1.jpg" alt="">
+                    <img src="./imgs/geral/flick-photo-2.jpg" alt="">
+                    <img src="./imgs/geral/flick-photo-3.jpg" alt="">
+                    <img src="./imgs/geral/flick-photo-4.jpg" alt="">
+                    <img src="./imgs/geral/flick-photo-5.jpg" alt="">
+                    <img src="./imgs/geral/flick-photo-6.jpg" alt="">
+                </div>
+            </div>
+            <div class="socials">
+                <h2 class="font-4-l cor-w">FOLLOW ME</h2>
+                <div class="icons">
+                    <a target="_blank" href="https://twitter.com/?lang=en"><img width="32" height="32" src="./icones/Twitter.svg" alt=""></a>
+                    <a target="_blank" href="https://www.instagram.com/arneborchphoto"><img width="32" height="32" src="./icones/Instagram.svg" alt=""></a>
+                    <!-- <a target="_blank" href="https://dribbble.com/"><img width="32" height="32" src="./icones/Dribbble.svg" alt=""></a> -->
+                    <a target="_blank" href="https://www.facebook.com/"><img width="32" height="33" src="./icones/Facebook.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+       <!-- <p class="footer-copy container font-2-m cor-w">Copyright © 2021. All Right Reserved by João Augusto</p> -->
+    </footer>
+
+    <script src="./js/plugin/simple-anime.js"></script>
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>
